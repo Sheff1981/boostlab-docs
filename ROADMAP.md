@@ -29,10 +29,10 @@
 
 ## Stage 4 — Automatic route selection
 
-- [ ] Multiple regions/nodes.
-- [ ] Rolling quality score.
+- [x] Multiple regions/nodes.
+- [x] Initial quality score using RTT/jitter/loss.
 - [ ] Automatic node switching with hysteresis.
-- [ ] Control-plane node discovery.
+- [x] Control-plane node discovery.
 
 ## Stage 5 — Production hardening
 
@@ -48,3 +48,12 @@
 - Windows client.
 - Accounts/subscriptions if required.
 - Regional capacity scaling.
+
+
+## Stage 3 discovery groundwork
+
+- [x] Control service can load a deterministic gateway list from `BOOSTLAB_NODES_JSON`.
+- [x] Android can fetch healthy gateways over HTTPS.
+- [x] Android benchmarks several gateways in parallel.
+- [x] Route score penalizes jitter and packet loss, not only ping.
+- [ ] Add rolling history and switching hysteresis after real multi-node measurements exist.
