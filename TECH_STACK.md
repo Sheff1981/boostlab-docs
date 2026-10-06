@@ -21,19 +21,11 @@ Not part of the target architecture:
 
 ### Windows
 
-- Language: C#.
-- Runtime: .NET 10.
-- UI: WinUI 3.
-- Platform layer: Windows App SDK 2.5.1.
-- Package management: Central Package Management.
-- Compiler policy: nullable enabled, latest recommended analyzers, warnings as errors.
+Windows client work is **paused**. The current product target is Android only.
 
-Not part of the target architecture:
+The existing C# / .NET 10 / WinUI 3 repository is retained so work is not lost, but no new Windows-client features should be implemented until Android is proven end-to-end.
 
-- WPF.
-- WinForms.
-- .NET Framework.
-- legacy UWP application architecture.
+Windows can still act as a temporary local development gateway for no-VPS LAN tests.
 
 ## Server side
 
