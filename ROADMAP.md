@@ -91,3 +91,18 @@ BOOSTLAB is currently an **Android-only private build for one friend**.
 - [x] Benchmark discovered LAN gateways automatically.
 - [ ] Verify discovery on two physical devices on the same Wi-Fi.
 - [ ] Verify the first real remote WireGuard route after a VPS or other remotely reachable gateway is available.
+
+
+## Android friend build
+
+- [x] Make Android the only active user-facing client target.
+- [x] Hide technical networking fields from the normal screen.
+- [x] Keep server configuration under a one-time advanced settings section.
+- [x] Remember the selected game between launches.
+- [x] Remember the public server profile between launches.
+- [x] Automatically re-check the saved gateway on app launch.
+- [x] Main flow is now: select game -> tap Boost -> disconnect when finished.
+- [x] Remote auto-selection ignores probe-only nodes that cannot provide a WireGuard tunnel.
+- [ ] Install the current APK on the friend's Android device.
+- [ ] Verify the local no-VPS probe test on physical Wi-Fi.
+- [ ] Verify the first real remote WireGuard handshake and per-app route.
