@@ -1,10 +1,8 @@
-# Probe Protocol v1
+# BOOSTLAB Network Protocols
 
-This document describes the temporary route-quality probe used before the real tunnel exists.
+## Route-quality probe v1
 
-## UDP endpoint
-
-Default gateway UDP port: **51821**
+Default gateway probe port: **UDP 51821**
 
 Client sends the exact UTF-8 payload:
 
@@ -12,17 +10,40 @@ Client sends the exact UTF-8 payload:
 
 A healthy gateway returns the same payload to the sender.
 
-## Purpose
-
 Repeated samples allow a client to calculate:
 
-- round-trip time;
+- median round-trip time;
 - packet loss;
-- jitter/variance;
+- jitter;
 - route stability.
 
-This is a measurement protocol only. It carries no application traffic and is not the future tunnel protocol.
+This is a measurement protocol only. It carries no application traffic.
 
-## Safety
+Unknown UDP payloads are ignored. The response is intentionally tiny to avoid creating a useful amplification service.
 
-Unknown UDP payloads are ignored. The probe response is intentionally tiny to avoid turning the service into a meaningful amplification mechanism.
+## Encrypted data plane
+
+Default tunnel port: **UDP 51820**
+
+The encrypted application data path uses standard WireGuard. BOOSTLAB does not define its own cryptographic packet format.
+
+For Android, the WireGuard interface configuration includes only the user-selected package through `IncludedApplications`, while peer `AllowedIPs` covers the destination address space transported through the tunnel.
+
+## Control plane
+
+Gateway discovery is exposed by:
+
+    GET /v1/nodes
+
+The Android client requires an HTTPS base URL for automatic discovery.
+
+Node objects currently contain:
+
+- `id`
+- `region`
+- `host`
+- `udp_port`
+- `healthy`
+- `updated_at`
+
+The control-plane node list contains routing metadata only. It must never contain WireGuard private keys.
