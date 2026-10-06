@@ -47,7 +47,9 @@ It does not carry or inspect game/application payload traffic.
 
 ### Windows client
 
-Reserved for the second client implementation after the Android data path is proven.
+The Windows client uses C# on .NET 10 with WinUI 3 / Windows App SDK. WPF and WinForms are not part of the target architecture.
+
+It will share the BOOSTLAB protocol contracts and route-selection model with Android while using Windows-native process selection and tunnel integration.
 
 ## Route selection
 
