@@ -1,5 +1,14 @@
 # BOOSTLAB Roadmap
 
+## Current product target
+
+BOOSTLAB is currently an **Android-only private build for one friend**.
+
+- Android client is the only active client target.
+- Windows client development is paused.
+- Windows may still be used as a temporary local development gateway during no-VPS testing.
+- Production networking work remains Android + Linux gateway/control plane.
+
 ## Stage 1 — Android shell
 
 - [x] Compose application shell.
@@ -45,8 +54,8 @@
 
 ## Later
 
-- Windows client.
-- Accounts/subscriptions if required.
+- Windows client — paused; current target is Android only.
+- Accounts/subscriptions if required later.
 - Regional capacity scaling.
 
 
