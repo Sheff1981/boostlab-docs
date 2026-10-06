@@ -101,7 +101,7 @@ BOOSTLAB is currently an **Android-only private build for one friend**.
 - [x] Remember the selected game between launches.
 - [x] Remember the public server profile between launches.
 - [x] Automatically re-check the saved gateway on app launch.
-- [x] Main flow is now: select game -> tap Boost -> disconnect when finished.
+- [x] Main flow is now: select game -> tap Boost -> successful tunnel opens the selected game -> disconnect when finished.
 - [x] Remote auto-selection ignores probe-only nodes that cannot provide a WireGuard tunnel.
 - [ ] Install the current APK on the friend's Android device.
 - [ ] Verify the local no-VPS probe test on physical Wi-Fi.
