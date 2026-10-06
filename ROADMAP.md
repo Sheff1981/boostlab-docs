@@ -72,3 +72,13 @@
 - [x] Wire Android to the real WireGuard backend; live handshake awaits the first VPS.
 - [x] Configure Android WireGuard with IncludedApplications; live traffic verification awaits the first VPS.
 - [ ] Measure direct route vs boosted route under real network conditions.
+
+
+## Local no-VPS development path
+
+- [x] Build a Windows version of the BOOSTLAB probe gateway.
+- [x] Package a Windows local-test bundle with PowerShell start/firewall helpers.
+- [x] Add Android LAN discovery over the existing UDP probe protocol.
+- [x] Benchmark discovered LAN gateways automatically.
+- [ ] Verify discovery on two physical devices on the same Wi-Fi.
+- [ ] Verify the first real remote WireGuard route after a VPS or other remotely reachable gateway is available.
