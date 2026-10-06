@@ -57,3 +57,18 @@
 - [x] Android benchmarks several gateways in parallel.
 - [x] Route score penalizes jitter and packet loss, not only ping.
 - [ ] Add rolling history and switching hysteresis after real multi-node measurements exist.
+
+
+## Stage 4 — WireGuard groundwork
+
+- [x] Select standard WireGuard instead of inventing a custom encrypted tunnel.
+- [x] Add the official Android WireGuard tunnel library.
+- [x] Add per-app WireGuard config generation using `IncludedApplications`.
+- [x] Generate the Android client identity locally.
+- [x] Encrypt the client private key at rest with Android Keystore AES-GCM.
+- [x] Add Linux WireGuard gateway configuration examples.
+- [x] Add nftables forwarding/NAT baseline.
+- [ ] Deploy the first real gateway and register the first Android public key.
+- [ ] Bring up a real encrypted tunnel from Android.
+- [ ] Confirm only the selected application traverses the tunnel.
+- [ ] Measure direct route vs boosted route under real network conditions.
