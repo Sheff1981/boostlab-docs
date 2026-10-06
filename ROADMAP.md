@@ -16,8 +16,8 @@
 - [x] UDP probe service.
 - [x] Gateway CI and container build definition.
 - [ ] Deploy one Linux gateway.
-- [ ] Android UDP probe client.
-- [ ] Display live RTT, jitter and packet loss.
+- [x] Android UDP probe client.
+- [x] Display live RTT, jitter and packet loss.
 
 ## Stage 3 — Encrypted per-app tunnel
 
