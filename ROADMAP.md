@@ -56,7 +56,7 @@
 - [x] Android can fetch healthy gateways over HTTPS.
 - [x] Android benchmarks several gateways in parallel.
 - [x] Route score penalizes jitter and packet loss, not only ping.
-- [ ] Add rolling history and switching hysteresis after real multi-node measurements exist.
+- [x] Add switching hysteresis; rolling history still follows real multi-node measurements.
 
 
 ## Stage 4 — WireGuard groundwork
@@ -69,6 +69,6 @@
 - [x] Add Linux WireGuard gateway configuration examples.
 - [x] Add nftables forwarding/NAT baseline.
 - [ ] Deploy the first real gateway and register the first Android public key.
-- [ ] Bring up a real encrypted tunnel from Android.
-- [ ] Confirm only the selected application traverses the tunnel.
+- [x] Wire Android to the real WireGuard backend; live handshake awaits the first VPS.
+- [x] Configure Android WireGuard with IncludedApplications; live traffic verification awaits the first VPS.
 - [ ] Measure direct route vs boosted route under real network conditions.
